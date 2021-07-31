@@ -1,7 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 import "./index.css";
+
+const greeting = 'Bienvenido a la tienda';
 
 const App = () => {
   return (
@@ -12,8 +15,14 @@ const App = () => {
         Tienda JMRuiz
       </h2>
       <NavBar/>
+      <ItemListContainer greeting={greeting}/>
     </div>
   );
 };
+
+ 
+
+
+
 
 ReactDOM.render(<App />, document.getElementById("root"));

@@ -1,13 +1,15 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import CartWidget from './CartWidget'
+
 
 const NavBar = () => {
     return (     
-        <div>
+        <div>          
             <Navbar bg="light" expand="lg">
              <Container>
-                <Navbar.Brand href="#home">JMRuiz</Navbar.Brand>
+                <Navbar.Brand href="#home"> <CartWidget/> </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
