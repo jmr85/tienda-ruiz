@@ -5,7 +5,10 @@ const ItemCount = ({stock, initial}) => {
     const [initialValue, setInitialValue] = useState(initial);
     const [stockValue, setStockValue] = useState(stock - initial);
 
-    /* estos estados son para componente Overlay toolpit */ 
+    /* 
+        estos estados son para componente 
+        Overlay toolpit de  react-bootstrap
+    */ 
     const [show, setShow] = useState(false);
     const target = useRef(null);
     /* */
