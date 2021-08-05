@@ -5,6 +5,9 @@ const ItemCount = ({stock, initial}) => {
     const [initialValue, setInitialValue] = useState(initial);
     const [stockValue, setStockValue] = useState(stock - initial);
 
+    /* para mostrar cantidad seleccionada en boton Agregar al carrito */
+    const [addToCart, setAddToCart] = useState(initialValue);
+
     /* 
         estos estados son para componente 
         Overlay toolpit de  react-bootstrap
@@ -13,14 +16,16 @@ const ItemCount = ({stock, initial}) => {
     const target = useRef(null);
     /* */
 
-    const onAdd = () => {
+    const onAddQty = () => {
         setInitialValue(stockValue > 0 && initialValue + 1);
         setStockValue(stockValue > 0 && stockValue - 1 );
+        setAddToCart(initialValue + 1);//setea la cantidad de prod agre al carrito
     }
 
-    const onSubstract = () => {
+    const onSubstractQty = () => {
         setInitialValue(initialValue - 1 );
         setStockValue(initialValue > 0 && stockValue + 1 );
+        setAddToCart(initialValue - 1);
     }
 
     return (
@@ -33,17 +38,25 @@ const ItemCount = ({stock, initial}) => {
                         <div class="col-md-12 text-center">             
                         <ButtonToolbar aria-label="Toolbar with button groups" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: 20}}>                    
                             <ButtonGroup className="me-2" aria-label="First group"> 
-                                {/* cuando initialValue == 0 bloquea button substract */}
-                                {initialValue == 0 ? <Button onClick={onSubstract} disabled> - </Button>: <Button onClick={onSubstract}> - </Button> }                       
+                                {/* cuando initialValue == 1 bloquea button substract */}
+                                {initialValue == 0 ? <Button onClick={onSubstractQty} disabled> - </Button>: <Button onClick={onSubstractQty}> - </Button> }                       
                             </ButtonGroup>
                                 <h2 style={{margin: 20}}> {initialValue} </h2>     
                             <ButtonGroup className="me-2" aria-label="Second group">
                                 {/* cuando stock == 0 bloquea button add */}
-                                {stockValue == 0 ? <Button onClick={onAdd} disabled> + </Button>: <Button onClick={onAdd}> + </Button>}                     
+                                {stockValue == 0 ? <Button onClick={onAddQty} disabled> + </Button>: <Button onClick={onAddQty}> + </Button>}                     
                             </ButtonGroup>
                             stock: {stockValue}
                         </ButtonToolbar>
-                        <Button variant="primary" variant="danger" ref={target} onClick={() => setShow(!show)}>Agregar al carrito</Button>
+                        
+                        {
+                            /* 
+                                si valor es 0 desactiva boton
+                            */
+                            initialValue == 0 ?
+                            <Button disabled variant="primary" variant="danger" ref={target} onClick={() => setShow(!show)}>Agregar al carrito</Button>: 
+                            <Button variant="primary" variant="danger" ref={target} onClick={() => setShow(!show)}>Agregar al carrito</Button>
+                        }
                         <Overlay target={target.current} show={show} placement="right">
                             {({ placement, arrowProps, show: _show, popper, ...props }) => (
                             <div
@@ -56,7 +69,7 @@ const ItemCount = ({stock, initial}) => {
                                 ...props.style,
                                 }}
                             >
-                                Todavia no hace nada
+                               Se ha agregado {addToCart} producto/s
                             </div>
                             )}
                         </Overlay>
