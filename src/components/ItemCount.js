@@ -38,13 +38,13 @@ const ItemCount = ({stock, initial}) => {
                         <div class="col-md-12 text-center">             
                         <ButtonToolbar aria-label="Toolbar with button groups" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: 20}}>                    
                             <ButtonGroup className="me-2" aria-label="First group"> 
-                                {/* cuando initialValue == 1 bloquea button substract */}
-                                {initialValue == 0 ? <Button onClick={onSubstractQty} disabled> - </Button>: <Button onClick={onSubstractQty}> - </Button> }                       
+                                {/* cuando initialValue === 1 bloquea button substract */}
+                                {initialValue === 0 ? <Button onClick={onSubstractQty} disabled> - </Button>: <Button onClick={onSubstractQty}> - </Button> }                       
                             </ButtonGroup>
                                 <h2 style={{margin: 20}}> {initialValue} </h2>     
                             <ButtonGroup className="me-2" aria-label="Second group">
-                                {/* cuando stock == 0 bloquea button add */}
-                                {stockValue == 0 ? <Button onClick={onAddQty} disabled> + </Button>: <Button onClick={onAddQty}> + </Button>}                     
+                                {/* cuando stock === 0 bloquea button add */}
+                                {stockValue === 0 ? <Button onClick={onAddQty} disabled> + </Button>: <Button onClick={onAddQty}> + </Button>}                     
                             </ButtonGroup>
                             stock: {stockValue}
                         </ButtonToolbar>
@@ -53,9 +53,9 @@ const ItemCount = ({stock, initial}) => {
                             /* 
                                 si valor es 0 desactiva boton
                             */
-                            initialValue == 0 ?
-                            <Button disabled variant="primary" variant="danger" ref={target} onClick={() => setShow(!show)}>Agregar al carrito</Button>: 
-                            <Button variant="primary" variant="danger" ref={target} onClick={() => setShow(!show)}>Agregar al carrito</Button>
+                            initialValue === 0 ?
+                            <Button disabled variant="primary" ref={target} onClick={() => setShow(!show)}>Agregar al carrito</Button>: 
+                            <Button variant="primary" ref={target} onClick={() => setShow(!show)}>Agregar al carrito</Button>
                         }
                         <Overlay target={target.current} show={show} placement="right">
                             {({ placement, arrowProps, show: _show, popper, ...props }) => (
