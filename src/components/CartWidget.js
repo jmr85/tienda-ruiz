@@ -4,9 +4,8 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const CartWidget = () => {
     return (
-        <div style={divStyle}>        
-            <FaShoppingCart />  
-            <label style={labelStyle}>JMRuiz</label>
+        <div className="img-circle masthead-brand" style={divStyle}>        
+            <FaShoppingCart md={12}/>
         </div>
     )
 }
@@ -14,9 +13,5 @@ const CartWidget = () => {
 const divStyle = {
     marginRight: 20
 };
-
-const labelStyle = {
-    marginLeft: 20,
-}
 
 export default CartWidget;

@@ -12,7 +12,7 @@ const App = () => {
       <h2 style={{textAlign: "center"}}>
         <i class="circular users icon"></i> 
         <br/>
-        Developer Bookstore
+        Dev Bookstore
       </h2>
       <NavBar/>
       <Container>

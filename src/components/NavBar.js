@@ -11,15 +11,18 @@ const NavBar = () => {
              <Container>
                 <Navbar.Brand href="#home"> <CartWidget/> </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Collapse id="basic-navbar-nav">                    
                 <Nav className="me-auto">
+                <Nav.Link href="https://github.com/jmr85/tienda-ruiz">
+                    <i class="fab fa-github"></i>                       
+                </Nav.Link>  
                     <Nav.Link href="#link">FAQs</Nav.Link>
                     <Nav.Link href="#home">Ofertas</Nav.Link>              
                     <NavDropdown title="Comprar" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Producto</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Servicio</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Vehiculo</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.4">Inmueble</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.1">Producto</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2">Servicio</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">Vehiculo</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.4">Inmueble</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
                 </Navbar.Collapse>
