@@ -14,7 +14,7 @@ const ItemListContainer = ({greeting}) => {
 }
 
 const divStyle = {
-    margin: 10
+    margin: 0
 };
 
 export default ItemListContainer;

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Row, Col, Spinner} from 'react-bootstrap';
 import  Item  from './Item';
-import fetchProductos from '../api/promesa';
+import fetchProductos from '../mock-api/promesa';
 
 const ItemList = () => {
     const [prod, setProd] = useState([]);
@@ -17,10 +17,10 @@ const ItemList = () => {
    
     return (
         <div>
-            <Row xs={1} md={2} className="g-4">
+            <Row md={1} className="g-4">
                 {loading && <Spinner animation="border" role="status"/> } 
                 {prod.map(item => (
-                    <Col xs={12} md={8}>
+                    <Col>
                         <Item key={item.id} title={item.title} price={item.price} pictureUrl={item.pictureUrl}></Item>
                     </Col>
                 ))}
