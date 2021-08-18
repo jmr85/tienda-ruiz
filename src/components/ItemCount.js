@@ -34,8 +34,8 @@ const ItemCount = ({stock, initial}) => {
                 <Card.Body>
                     <Card.Title>Libro programacion Java</Card.Title>
                     <h5>Cantidad: </h5> 
-                    <div class="container bg-light">
-                        <div class="col-md-12 text-center">             
+                    <div className="container bg-light">
+                        <div className="col-md-12 text-center">             
                         <ButtonToolbar aria-label="Toolbar with button groups" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: 20}}>                    
                             <ButtonGroup className="me-2" aria-label="First group"> 
                                 {/* cuando initialValue === 1 bloquea button substract */}

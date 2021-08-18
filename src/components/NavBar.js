@@ -1,34 +1,36 @@
 import React from "react";
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import CartWidget from './CartWidget';
+import {NavLink} from 'react-router-dom'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-import CartWidget from './CartWidget'
-
 
 const NavBar = () => {
     return (     
         <div>          
             <Navbar bg="light" expand="lg">
-             <Container>
-                <Navbar.Brand href="#home"> <CartWidget/> </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">                    
-                <Nav className="me-auto">
-                <Nav.Link href="https://github.com/jmr85/tienda-ruiz">
-                    <i class="fab fa-github"></i>                       
-                </Nav.Link>  
-                    <Nav.Link href="#link">FAQs</Nav.Link>
-                    <Nav.Link href="#home">Ofertas</Nav.Link>              
-                    <NavDropdown title="Comprar" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Producto</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Servicio</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Vehiculo</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.4">Inmueble</NavDropdown.Item>
-                    </NavDropdown>
-                </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
-    </div>
+                <Container>
+                    {/*
+                        <Nav.Link href="https://github.com/jmr85/tienda-ruiz">
+                            <i className="fab fa-github"></i>                       
+                        </Nav.Link>
+                     */}                     
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">                                         
+                        <Nav className="me-auto">
+                            <Nav.Link as={NavLink} activeClassName="active" to="/">
+                                <CartWidget/>
+                            </Nav.Link>
+                            <Nav.Link as={NavLink} to="/category/libros">
+                                Libros
+                            </Nav.Link>
+                            <Nav.Link as={NavLink} to="/category/notebooks">
+                                Notebooks
+                            </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </div>
     )
 }
 

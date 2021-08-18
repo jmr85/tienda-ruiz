@@ -1,4 +1,4 @@
-import productos from './productos';
+import productos from './productos.json';
 
 function fetchProductos(){
     return new Promise((resolve, reject)=> {

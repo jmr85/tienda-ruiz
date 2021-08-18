@@ -1,0 +1,115 @@
+[
+    {
+      "id": 1, 
+      "category": "libros", 
+      "title": "Libro Bases de Datos", 
+      "price": 4500, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_997405-MLA25004682363_082016-O.webp", 
+      "description": "Esta obra desarrolla el concepto y la manipulación de un Motor de Base de Datos, la manera de interactuar con él a través de los diferentes lenguajes asociados y modelos de construcción lógica de datos."
+    },
+    {
+      "id": 2, 
+      "category": "libros", 
+      "title": "Libro Domine Joomla! Manual Practico", 
+      "price": 1500, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_927275-MLA40290195889_122019-O.webp", 
+      "description": "praesent semper feugiat nibh sed"
+    },
+    {
+      "id": 3, 
+      "category": "libros", 
+      "title": "Programación Orientada A Objetos Con C++. 5ª Edición.", 
+      "price": 9999, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_715507-MLA29423431819_022019-O.webp", 
+      "description": "erat velit scelerisque in dictum"
+    },
+    {
+      "id": 4, 
+      "category": "libros", 
+      "title": "Libro Java a fondo", 
+      "price": 2951, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_837955-MLA43568219240_092020-F.webp", 
+      "description": "fames ac turpis egestas integer"  
+    },
+    {
+      "id": 5, 
+      "category": "libros", 
+      "title": "Libro Algoritmos a fondo", 
+      "price": 5000, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_761305-MLA25004373921_082016-O.webp", 
+      "description": "quis viverra nibh cras pulvinar"
+    },
+    {
+      "id": 6, 
+      "category": "libros", 
+      "title": "Libro PHP Avanzado", 
+      "price": 5000, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_944382-MLA46963295266_082021-O.webp", 
+      "description": "sed libero enim sed faucibus"  
+    },
+    {
+      "id": 7, 
+      "category": "libros", 
+      "title": "Libro JEE 7 a Fondo", 
+      "price": 5000, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_946621-MLA20803762218_072016-O.webp", 
+      "description": "sem fringilla ut morbi tincidunt"
+    },
+    {
+      "id": 8, 
+      "category": "notebooks", 
+      "title": "Notebook Exo Smart L33 Intel N4020 Ram4gb Ssd64gb 14hd Win10", 
+      "price": 47500, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_660342-MLA46009561942_052021-O.webp", 
+      "description": "sem fringilla ut morbi tincidunt"
+    },
+    {
+      "id": 9, 
+      "category": "notebooks", 
+      "title": "Notebook Dell Inspiron 3505 gris 15.6", 
+      "price": 139999, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_790874-MLA44939295335_022021-O.webp", 
+      "description": "sem fringilla ut morbi tincidunt"
+    },
+    {
+      "id": 10, 
+      "category": "notebooks", 
+      "title": "Notebook HP 15-DW1083WM scarlet red 15.6", 
+      "price": 66699, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_920717-MLA44939467848_022021-O.webp", 
+      "description": "sem fringilla ut morbi tincidunt"
+    },
+    {
+      "id": 11, 
+      "category": "notebooks", 
+      "title": "Notebook Dell Inspiron 3505 gris 15.6", 
+      "price": 129999, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_737021-MLA46833673951_072021-O.webp", 
+      "description": "sem fringilla ut morbi tincidunt"
+    },
+    {
+      "id": 12, 
+      "category": "notebooks", 
+      "title": "Notebook Core I5 15,6'", 
+      "price": 90000, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_831118-MLA45508704919_042021-O.webp", 
+      "description": "sem fringilla ut morbi tincidunt"
+    },
+    {
+      "id": 13, 
+      "category": "libros", 
+      "title": "Instala Administra Secutiza Y Virtualiza Entornos Linux", 
+      "price": 9070, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_787932-MLA46220910464_052021-O.webp", 
+      "description": "sem fringilla ut morbi tincidunt"
+    },
+    {
+      "id": 14, 
+      "category": "libros", 
+      "title": "Smart Home Automation With Linux And Raspberry Pi", 
+      "price": 26750, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_803921-MLA41405768790_042020-O.webp", 
+      "description": "sem fringilla ut morbi tincidunt"
+    }
+    
+]
