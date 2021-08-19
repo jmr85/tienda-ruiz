@@ -21,14 +21,14 @@ const ItemDetailContainer = () => {
 
     return (
         <div>
-            <Container fluid="md">                  
+            <Container>                  
                 {
                  load 
                 ? 
                     <Spinner animation="border" role="status"/> 
                 : 
                     <Row>           
-                    <Col>
+                    <Col xs lg="12">
                           <ItemDetail 
                               key={product.id} 
                               title={product.title} 

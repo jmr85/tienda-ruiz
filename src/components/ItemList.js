@@ -1,13 +1,14 @@
 import React from 'react';
-import {Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import Item from './Item';
+
 
 
 const ItemList = ({listProduct}) => {
 
     return (
         <div>
-            <Row md={1} className="g-5"> 
+            <Row xs={1} md={4} className="g-4">
                 {listProduct.map(item => (                                          
                     <Col key={item.id}>
                         <Item
@@ -17,9 +18,10 @@ const ItemList = ({listProduct}) => {
                             price={item.price} 
                             pictureUrl={item.pictureUrl} 
                         />
+                      
                     </Col>                   
-                ))}
-            </Row>
+                ))}   
+            </Row>           
         </div>
     );
 }

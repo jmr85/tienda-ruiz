@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Spinner, Container } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
 import ItemList from './ItemList';
 import fetchProductos from '../mock-api/promesa';
 import { useParams } from 'react-router-dom';
@@ -26,11 +26,9 @@ const ItemListContainer = () => {
     }, [id])
 
     return (
-        <div style={divStyle}>
-            <Container>     
-                {load && <Spinner animation="border" role="status"/> } 
-                <ItemList listProduct={prod}/>      
-            </Container>    
+        <div style={divStyle}>    
+            {load && <Spinner animation="border" role="status"/> } 
+            <ItemList listProduct={prod}/>              
         </div>
     )
 }

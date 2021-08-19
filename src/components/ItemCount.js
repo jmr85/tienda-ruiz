@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react';
-import { Card, ButtonToolbar, ButtonGroup, Button, Overlay } from 'react-bootstrap';
+import { Card, ButtonToolbar, ButtonGroup, Button, Overlay, Row , Col} from 'react-bootstrap';
 
 const ItemCount = ({stock, initial}) => {
     const [initialValue, setInitialValue] = useState(initial);
@@ -30,10 +30,12 @@ const ItemCount = ({stock, initial}) => {
 
     return (
         <div>
-            <Card style={{ width: '18rem', margin: 20}}>
+            <Row>
+                <Col>
+                <Card>
                 <Card.Body>
-                    <Card.Title>Libro programacion Java</Card.Title>
-                    <h5>Cantidad: </h5> 
+                    {/*<Card.Title>Libro programacion Java</Card.Title>*/}
+                    <h5>Cantidad: </h5>
                     <div className="container bg-light">
                         <div className="col-md-12 text-center">             
                         <ButtonToolbar aria-label="Toolbar with button groups" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: 20}}>                    
@@ -77,6 +79,10 @@ const ItemCount = ({stock, initial}) => {
                     </div>
                 </Card.Body>
             </Card>
+                </Col>
+            </Row>
+           
+           
         </div>
     )
 

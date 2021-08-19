@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import PageNotFound from './components/PageNotFound';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -28,13 +29,11 @@ const App = () => {
             <Route exact path="/item/:id" component={ItemDetailContainer} />
             <Route path="*" component={PageNotFound} />
         </Switch>
-        {/*<Container>
-            <Row>
-            <Col xs={6} md={4}> <ItemListContainer/> </Col>
-            <Col xs={6} md={4}> <ItemDetailContainer/> </Col>
-            <Col xs={6} md={4}> <ItemCount stock={5} initial={1}/> </Col>
-            </Row>
-        </Container>*/}
+        
+          
+                    
+            
+       
         
         </div>
     </Router>
