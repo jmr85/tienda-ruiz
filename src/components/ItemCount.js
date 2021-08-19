@@ -28,6 +28,11 @@ const ItemCount = ({stock, initial}) => {
         setAddToCart(initialValue - 1);
     }
 
+    const onAdd = () => {
+        setShow(!show);
+        alert('You clicked the button!');
+    }
+
     return (
         <div>
             <Row>
@@ -56,8 +61,8 @@ const ItemCount = ({stock, initial}) => {
                                 si valor es 0 desactiva boton
                             */
                             initialValue === 0 ?
-                            <Button disabled variant="primary" ref={target} onClick={() => setShow(!show)}>Agregar al carrito</Button>: 
-                            <Button variant="primary" ref={target} onClick={() => setShow(!show)}>Agregar al carrito</Button>
+                            <Button disabled variant="primary" ref={target} onClick={() => setShow(onAdd)}>Agregar al carrito</Button>: 
+                            <Button variant="primary" ref={target} onClick={onAdd}>Agregar al carrito</Button>
                         }
                         <Overlay target={target.current} show={show} placement="right">
                             {({ placement, arrowProps, show: _show, popper, ...props }) => (
