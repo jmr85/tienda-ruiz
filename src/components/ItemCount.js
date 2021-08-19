@@ -30,7 +30,7 @@ const ItemCount = ({stock, initial}) => {
 
     const onAdd = () => {
         setShow(!show);
-        alert('You clicked the button!');
+        alert('You clicked the button!');//alert de prueba
     }
 
     return (
