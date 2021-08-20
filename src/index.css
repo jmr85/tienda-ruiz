@@ -3,6 +3,12 @@ body {
   margin: 0 auto;
 }
 
-.content {
-  color: blue;
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+
+link:active {
+  text-decoration: underline;
 }

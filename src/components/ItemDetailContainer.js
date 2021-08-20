@@ -35,6 +35,7 @@ const ItemDetailContainer = () => {
                               price={product.price} 
                               pictureUrl={product.pictureUrl} 
                               description={product.description}
+                              stock={product.stock}
                           />
                       </Col>                             
                     </Row>

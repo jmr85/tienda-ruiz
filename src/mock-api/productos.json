@@ -5,7 +5,8 @@
       "title": "Libro Bases de Datos", 
       "price": 4500, 
       "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_997405-MLA25004682363_082016-O.webp", 
-      "description": "Esta obra desarrolla el concepto y la manipulación de un Motor de Base de Datos, la manera de interactuar con él a través de los diferentes lenguajes asociados y modelos de construcción lógica de datos."
+      "description": "Esta obra desarrolla el concepto y la manipulación de un Motor de Base de Datos, la manera de interactuar con él a través de los diferentes lenguajes asociados y modelos de construcción lógica de datos.",
+      "stock": 4
     },
     {
       "id": 2, 
@@ -13,7 +14,8 @@
       "title": "Libro Domine Joomla! Manual Practico", 
       "price": 1500, 
       "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_927275-MLA40290195889_122019-O.webp", 
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "stock": 10
     },
     {
       "id": 3, 
@@ -21,7 +23,8 @@
       "title": "Programación Orientada A Objetos Con C++. 5ª Edición.", 
       "price": 9999, 
       "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_715507-MLA29423431819_022019-O.webp", 
-      "description": "Urna et pharetra pharetra massa. Etiam sit amet nisl purus. Integer vitae justo eget magna fermentum iaculis eu non. Pellentesque diam volutpat commodo sed egestas. Euismod in pellentesque massa placerat duis ultricies lacus. Bibendum at varius vel pharetra vel turpis nunc eget lorem. Vel quam elementum pulvinar etiam non quam lacus suspendisse. Sed adipiscing diam donec adipiscing. Gravida cum sociis natoque penatibus et magnis dis. Posuere morbi leo urna molestie at elementum. Molestie a iaculis at erat. Nullam non nisi est sit. Vitae aliquet nec ullamcorper sit amet risus. In ante metus dictum at tempor commodo ullamcorper a lacus. Euismod quis viverra nibh cras pulvinar. Cum sociis natoque penatibus et magnis. Egestas erat imperdiet sed euismod nisi porta."
+      "description": "Urna et pharetra pharetra massa. Etiam sit amet nisl purus. Integer vitae justo eget magna fermentum iaculis eu non. Pellentesque diam volutpat commodo sed egestas. Euismod in pellentesque massa placerat duis ultricies lacus. Bibendum at varius vel pharetra vel turpis nunc eget lorem. Vel quam elementum pulvinar etiam non quam lacus suspendisse. Sed adipiscing diam donec adipiscing. Gravida cum sociis natoque penatibus et magnis dis. Posuere morbi leo urna molestie at elementum. Molestie a iaculis at erat. Nullam non nisi est sit. Vitae aliquet nec ullamcorper sit amet risus. In ante metus dictum at tempor commodo ullamcorper a lacus. Euismod quis viverra nibh cras pulvinar. Cum sociis natoque penatibus et magnis. Egestas erat imperdiet sed euismod nisi porta.",
+      "stock": 5
     },
     {
       "id": 4, 
@@ -29,7 +32,8 @@
       "title": "Libro Java a fondo", 
       "price": 2951, 
       "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_837955-MLA43568219240_092020-F.webp", 
-      "description": "fames ac turpis egestas integer"  
+      "description": "fames ac turpis egestas integer",
+      "stock": 4
     },
     {
       "id": 5, 
@@ -37,7 +41,8 @@
       "title": "Libro Algoritmos a fondo", 
       "price": 5000, 
       "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_761305-MLA25004373921_082016-O.webp", 
-      "description": "quis viverra nibh cras pulvinar"
+      "description": "quis viverra nibh cras pulvinar",
+      "stock": 9
     },
     {
       "id": 6, 
@@ -45,7 +50,8 @@
       "title": "Libro PHP Avanzado", 
       "price": 5000, 
       "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_944382-MLA46963295266_082021-O.webp", 
-      "description": "sed libero enim sed faucibus"  
+      "description": "sed libero enim sed faucibus",
+      "stock": 5
     },
     {
       "id": 7, 
@@ -53,7 +59,8 @@
       "title": "Libro JEE 7 a Fondo", 
       "price": 5000, 
       "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_946621-MLA20803762218_072016-O.webp", 
-      "description": "sem fringilla ut morbi tincidunt"
+      "description": "sem fringilla ut morbi tincidunt",
+      "stock": 3
     },
     {
       "id": 8, 
@@ -61,7 +68,8 @@
       "title": "Notebook Exo Smart L33 Intel N4020 Ram4gb Ssd64gb 14hd Win10", 
       "price": 47500, 
       "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_660342-MLA46009561942_052021-O.webp", 
-      "description": "sem fringilla ut morbi tincidunt"
+      "description": "sem fringilla ut morbi tincidunt",
+      "stock": 2
     },
     {
       "id": 9, 
@@ -69,7 +77,8 @@
       "title": "Notebook Dell Inspiron 3505 gris 15.6", 
       "price": 139999, 
       "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_790874-MLA44939295335_022021-O.webp", 
-      "description": "sem fringilla ut morbi tincidunt"
+      "description": "sem fringilla ut morbi tincidunt",
+      "stock": 1
     },
     {
       "id": 10, 
@@ -77,7 +86,8 @@
       "title": "Notebook HP 15-DW1083WM scarlet red 15.6", 
       "price": 66699, 
       "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_920717-MLA44939467848_022021-O.webp", 
-      "description": "Et sollicitudin ac orci phasellus egestas tellus. Viverra mauris in aliquam sem fringilla ut morbi. Enim eu turpis egestas pretium aenean pharetra magna ac placerat. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget. Justo eget magna fermentum iaculis eu non diam phasellus. Nulla facilisi cras fermentum odio. Sem viverra aliquet eget sit amet tellus cras. Id leo in vitae turpis massa sed elementum tempus. Sodales ut eu sem integer vitae. Egestas integer eget aliquet nibh praesent tristique magna sit. Sagittis nisl rhoncus mattis rhoncus urna. Dui id ornare arcu odio ut sem nulla pharetra. Tortor pretium viverra suspendisse potenti. Facilisis sed odio morbi quis commodo. Porttitor massa id neque aliquam vestibulum. Gravida neque convallis a cras semper auctor neque vitae."
+      "description": "Et sollicitudin ac orci phasellus egestas tellus. Viverra mauris in aliquam sem fringilla ut morbi. Enim eu turpis egestas pretium aenean pharetra magna ac placerat. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget. Justo eget magna fermentum iaculis eu non diam phasellus. Nulla facilisi cras fermentum odio. Sem viverra aliquet eget sit amet tellus cras. Id leo in vitae turpis massa sed elementum tempus. Sodales ut eu sem integer vitae. Egestas integer eget aliquet nibh praesent tristique magna sit. Sagittis nisl rhoncus mattis rhoncus urna. Dui id ornare arcu odio ut sem nulla pharetra. Tortor pretium viverra suspendisse potenti. Facilisis sed odio morbi quis commodo. Porttitor massa id neque aliquam vestibulum. Gravida neque convallis a cras semper auctor neque vitae.",
+      "stock": 3
     },
     {
       "id": 11, 
@@ -85,7 +95,8 @@
       "title": "Notebook Dell Inspiron 3505 gris 15.6", 
       "price": 129999, 
       "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_737021-MLA46833673951_072021-O.webp", 
-      "description": "Adipiscing vitae proin sagittis nisl. Facilisi morbi tempus iaculis urna id volutpat. Eu facilisis sed odio morbi quis. Ut morbi tincidunt augue interdum velit. Enim nulla aliquet porttitor lacus. Urna nunc id cursus metus aliquam. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Nec sagittis aliquam malesuada bibendum. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et. Tempor nec feugiat nisl pretium fusce. Tellus elementum sagittis vitae et leo. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Adipiscing tristique risus nec feugiat in. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam. Facilisis magna etiam tempor orci. Purus ut faucibus pulvinar elementum integer. Quisque id diam vel quam elementum pulvinar etiam."
+      "description": "Adipiscing vitae proin sagittis nisl. Facilisi morbi tempus iaculis urna id volutpat. Eu facilisis sed odio morbi quis. Ut morbi tincidunt augue interdum velit. Enim nulla aliquet porttitor lacus. Urna nunc id cursus metus aliquam. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Nec sagittis aliquam malesuada bibendum. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et. Tempor nec feugiat nisl pretium fusce. Tellus elementum sagittis vitae et leo. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Adipiscing tristique risus nec feugiat in. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam. Facilisis magna etiam tempor orci. Purus ut faucibus pulvinar elementum integer. Quisque id diam vel quam elementum pulvinar etiam.",
+      "stock": 6
     },
     {
       "id": 12, 
@@ -93,7 +104,8 @@
       "title": "Notebook Core I5 15,6'", 
       "price": 90000, 
       "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_831118-MLA45508704919_042021-O.webp", 
-      "description": "sem fringilla ut morbi tincidunt"
+      "description": "sem fringilla ut morbi tincidunt",
+      "stock": 2
     },
     {
       "id": 13, 
@@ -101,7 +113,8 @@
       "title": "Instala Administra Secutiza Y Virtualiza Entornos Linux", 
       "price": 9070, 
       "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_787932-MLA46220910464_052021-O.webp", 
-      "description": "Urna et pharetra pharetra massa. Etiam sit amet nisl purus. Integer vitae justo eget magna fermentum iaculis eu non. Pellentesque diam volutpat commodo sed egestas. Euismod in pellentesque massa placerat duis ultricies lacus. Bibendum at varius vel pharetra vel turpis nunc eget lorem. Vel quam elementum pulvinar etiam non quam lacus suspendisse. Sed adipiscing diam donec adipiscing. Gravida cum sociis natoque penatibus et magnis dis. Posuere morbi leo urna molestie at elementum. Molestie a iaculis at erat. Nullam non nisi est sit. Vitae aliquet nec ullamcorper sit amet risus. In ante metus dictum at tempor commodo ullamcorper a lacus. Euismod quis viverra nibh cras pulvinar. Cum sociis natoque penatibus et magnis. Egestas erat imperdiet sed euismod nisi porta."
+      "description": "Urna et pharetra pharetra massa. Etiam sit amet nisl purus. Integer vitae justo eget magna fermentum iaculis eu non. Pellentesque diam volutpat commodo sed egestas. Euismod in pellentesque massa placerat duis ultricies lacus. Bibendum at varius vel pharetra vel turpis nunc eget lorem. Vel quam elementum pulvinar etiam non quam lacus suspendisse. Sed adipiscing diam donec adipiscing. Gravida cum sociis natoque penatibus et magnis dis. Posuere morbi leo urna molestie at elementum. Molestie a iaculis at erat. Nullam non nisi est sit. Vitae aliquet nec ullamcorper sit amet risus. In ante metus dictum at tempor commodo ullamcorper a lacus. Euismod quis viverra nibh cras pulvinar. Cum sociis natoque penatibus et magnis. Egestas erat imperdiet sed euismod nisi porta.",
+      "stock": 1
     },
     {
       "id": 14, 
@@ -109,7 +122,43 @@
       "title": "Smart Home Automation With Linux And Raspberry Pi", 
       "price": 26750, 
       "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_803921-MLA41405768790_042020-O.webp", 
-      "description": "sem fringilla ut morbi tincidunt"
-    }
-    
+      "description": "sem fringilla ut morbi tincidunt",
+      "stock": 7
+    },
+    {
+      "id": 15, 
+      "category": "sillas-oficina", 
+      "title": "Silla Escritorio Oficina Butaca Sillon Ejecutivo Pc Premium", 
+      "price": 279998, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_736595-MLA46756811790_072021-O.webp", 
+      "description": "Estrctura reforzada Apoyabrazos ajustables Mecanismo de ajuste de altura Basculante: regula inclinación de respaldo para atras y asiento Ruedas de alta durabilidad Soporta hasta 150 kg.",
+      "stock": 7
+    },
+    {
+      "id": 16, 
+      "category": "sillas-oficina", 
+      "title": "Silla Escritorio Oficina Butaca Sillon Ejecutivo Premium Pc", 
+      "price": 14495, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_862527-MLA46611706485_072021-O.webp", 
+      "description": "SILLA OFICINA Características del producto Estrctura reforzada Mecanismo de ajuste de altura Basculante: inclinación de respaldo para atras y asientoRuedas de alta durabilidadSoporta hasta 150 kg.",
+      "stock": 4
+    },
+    {
+      "id": 17, 
+      "category": "sillas-oficina", 
+      "title": "Sillon Gamer Playstation Xbox Gaming Pc Oficina Ejecutivo", 
+      "price": 31998, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_657921-MLA46567518053_062021-O.webp", 
+      "description": "sem fringilla ut morbi tincidunt sem fringilla ut morbi tincidunt sem fringilla ut morbi tincidunt sem fringilla ut morbi tincidunt",
+      "stock": 5
+    },
+    {
+      "id": 18, 
+      "category": "sillas-oficina", 
+      "title": "Silla Gamer Ergonómica Apoyapiés Reclinable Premium Cuotas", 
+      "price": 59824, 
+      "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_776455-MLA44378062796_122020-O.webp", 
+      "description": "sem fringilla ut morbi tincidunt sem fringilla ut morbi tincidunt sem fringilla ut morbi tincidunt sem fringilla ut morbi tincidunt sem fringilla ut morbi tincidunt",
+      "stock": 7
+    }  
 ]

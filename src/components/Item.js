@@ -11,18 +11,14 @@ const Item = ({id,title,price,pictureUrl}) => {
                 <Link to ={`/item/${id}`}> 
                     <Card.Img variant="top" src={pictureUrl} />
                     <Card.Header>
-                        
                         <Card.Title>        
                             {title}
-                        </Card.Title>
-                    
-                    
+                        </Card.Title>              
                     </Card.Header>
                     <Card.Body>              
                         <Card.Text>
                             ${price}
                         </Card.Text>
-                      
                     </Card.Body>
                 </Link>
             </Card>           
