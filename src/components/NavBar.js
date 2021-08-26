@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import CartWidget from './CartWidget';
+import CartWidget from './Logo';
 import {NavLink} from 'react-router-dom'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const CartWidget = () => {
     return (
         <div > 
-            <img src="/shoppingcart.png" alt="Cart" ></img> 
+            <img src="/logo.png" alt="Dev Bookstore" ></img> 
         </div>
     )
 }

@@ -3,6 +3,8 @@ import { Card, ButtonToolbar, ButtonGroup, Button, Row, Col} from 'react-bootstr
 
 
 const ItemCount = ({stock, initial, onAdd}) => {
+
+
     const [initialValue, setInitialValue] = useState(initial);
     const [stockValue, setStockValue] = useState(stock - initial);
 

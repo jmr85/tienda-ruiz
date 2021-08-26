@@ -1,34 +1,39 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { Button, Badge } from 'react-bootstrap';
 import { useHistory, Link } from "react-router-dom";
 import ItemCount from './ItemCount';
+import { CartContext } from '../context/CartContext';
 import Swal from 'sweetalert2';
 
-const ItemDetail = ({title, price, pictureUrl, description, stock}) => {
+const ItemDetail = (product) => {
+
+    const {title, price, pictureUrl, description, stock} = product;
+
+    const {addItem} = useContext(CartContext);
 
     const [hideItemCount, setHideItemCount] = useState(false);
 
     let history = useHistory();
     const handleOnclick = () => {
-            history.goBack();
+        history.goBack();
     }
 
     const onAdd = (stockValue) => {
         stockValue === 1 ? 
         Swal.fire({title:'Bien!', text: `Has agregado  ${stockValue} producto al carrito`, icon: 'success', confirmButtonColor: 'green'}): 
-        Swal.fire('Bien!', `Has agregado  ${stockValue} productos al carrito`,'success');
+        Swal.fire({title:'Bien!', text: `Has agregado  ${stockValue} productos al carrito`, icon: 'success', confirmButtonColor: 'green'});
         setHideItemCount(true);
-        
+        addItem(product, stockValue);
     }
 
     return (
-            <div class="container-fluid">
+            <div className="container-fluid">
                 <Button className="btn btn-primary btn-sm" onClick={handleOnclick}>Atras</Button>
-                <div class="row" className="animate__animated animate__fadeIn">
-                     <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-7">
-                                    <h3 nameClass="text-center"> {title} </h3>
+                <div className="row animate__animated animate__fadeIn">
+                     <div className="col-md-12">
+                        <div className="row">
+                            <div className="col-md-7">
+                                    <h3 className="text-center"> {title} </h3>
                                     <dl>
                                         <dt>
                                             <Badge pill bg="success">
@@ -47,7 +52,7 @@ const ItemDetail = ({title, price, pictureUrl, description, stock}) => {
                                     </dd>
                                 </dl>
                             </div>
-                            <div class="col-md-5">                                            
+                            <div className="col-md-5">                                            
                                 { 
                                     !hideItemCount 
                                     ? 

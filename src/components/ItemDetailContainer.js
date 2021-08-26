@@ -31,6 +31,7 @@ const ItemDetailContainer = () => {
                     <Col xs lg="12">
                           <ItemDetail 
                               key={product.id} 
+                              id={product.title}
                               title={product.title} 
                               price={product.price} 
                               pictureUrl={product.pictureUrl} 
