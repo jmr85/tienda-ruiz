@@ -27,19 +27,16 @@ export const CartProvider = ({ children }) => {
     
     const clearAllItems = () => setItems([]);
 
-    
-    // const totalFile = (item, quantity) => {
-    //   return item * quantity;
-    // }; 
-
-    // const totalItemsCart = (total) => {
-    //   let suma = 0;
-    //   suma = total.reduce((a, b) => a + b);
-    //   return suma;
-    // }; 
+    const countItemQuantity = () =>{
+      let count = 0;
+      for (const iterator of items){
+          count += iterator.quantity;
+      }
+      return count;
+    }
     
     return (
-      <CartContext.Provider value={{ items, setItems, addItem, removeItem, clearAllItems }}>
+      <CartContext.Provider value={{ items, setItems, addItem, removeItem, clearAllItems, countItemQuantity }}>
         {children}
       </CartContext.Provider>
     );

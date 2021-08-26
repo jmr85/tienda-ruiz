@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import CartWidget from './Logo';
+import Logo from './Logo';
+import CartWidget from './CartWidget';
 import {NavLink} from 'react-router-dom'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
@@ -11,8 +12,8 @@ const NavBar = () => {
             <Navbar bg="light" expand="lg" style={{padding: 0}}>
                 <Container>                          
                     <Navbar.Brand as={NavLink} activeClassName="active" to="/">
-                        <CartWidget/>
-                    </Navbar.Brand>         
+                        <Logo/>                   
+                    </Navbar.Brand>                         
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">                                         
                         <Nav className="me-auto">
@@ -31,6 +32,7 @@ const NavBar = () => {
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
+                <CartWidget/>
             </Navbar>
         </div>
     )

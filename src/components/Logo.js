@@ -1,7 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const CartWidget = () => {
+const Logo = () => {
     return (
         <div > 
             <img src="/logo.png" alt="Dev Bookstore" ></img> 
@@ -9,4 +9,4 @@ const CartWidget = () => {
     )
 }
 
-export default CartWidget;
+export default Logo;
