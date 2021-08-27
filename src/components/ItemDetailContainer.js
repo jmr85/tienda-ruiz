@@ -1,21 +1,32 @@
 import React, {useState, useEffect} from 'react';
+import { getFirestore } from "../firebase/firebase-config";
 import {Container, Row, Col, Spinner} from 'react-bootstrap';
 import ItemDetail from './ItemDetail';
-import fetchProductos from '../mock-api/promesa';
 import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState({});
+    const [product, setProduct] = useState(null);
     const [load, setLoad] = useState(true);//para el <Spinner/>
 
     const {id} = useParams();
 
     useEffect(() => {
-        fetchProductos().then( productos => {
-            let byId = productos.find(element => element.id === parseInt(id));
-            setProduct(byId);
+        const db = getFirestore();
+        const itemCollection = db.collection("items");
+
+        const currentItem = itemCollection.doc(id);
+
+        currentItem.get().then(document => {
+            if(!document.exists){
+                console.log("No item");
+                return;
+            }
+            setProduct({
+                id: document.id, ...document.data()
+            });
             setLoad(false);
-        }).catch(console.log);
+        });
+
         console.log('useEffect');
     }, [id])
 
@@ -31,10 +42,10 @@ const ItemDetailContainer = () => {
                     <Col xs lg="12">
                           <ItemDetail 
                               key={product.id} 
-                              id={product.title}
+                              id={product.id}
                               title={product.title} 
                               price={product.price} 
-                              pictureUrl={product.pictureUrl} 
+                              pictureUrl={product.imageId} 
                               description={product.description}
                               stock={product.stock}
                           />

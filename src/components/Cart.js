@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from 'react';
 import { CartContext } from '../context/CartContext';
 import { Badge, Button } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
-import NumberFormat from 'react-number-format';
 
 const Cart = () => {
     
@@ -62,20 +61,10 @@ const Cart = () => {
                                                     {element.quantity}
                                                 </td>
                                                 <td>
-                                                    <NumberFormat
-                                                        value={element.item.price}                                                  
-                                                        displayType={'text'}
-                                                        thousandSeparator={true}
-                                                        prefix={'$'} 
-                                                    />
+                                                    ${element.item.price}                                                                                                       
                                                 </td>
                                                 <td>
-                                                    <NumberFormat
-                                                        value={element.item.price * element.quantity}
-                                                        displayType={'text'}
-                                                        thousandSeparator={true}
-                                                        prefix={'$'} 
-                                                    />                                                                                      
+                                                   ${element.item.price * element.quantity}                                                                                                                                        
                                                 </td>
                                                 <td>
                                                     ${acumuladorTotal += element.item.price * element.quantity}
@@ -93,13 +82,7 @@ const Cart = () => {
                                                 <td>
                                                     <h2>
                                                         <Badge bg="success">
-                                                            Total: 
-                                                            <NumberFormat
-                                                                value={acumuladorTotal}
-                                                                displayType={'text'}
-                                                                thousandSeparator={true}
-                                                                prefix={'$'} 
-                                                            />  
+                                                            Total:$ {acumuladorTotal}                                                           
                                                         </Badge>
                                                     </h2>
                                                 </td>
@@ -107,11 +90,9 @@ const Cart = () => {
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
-                                                <td></td>
-                                                                                                                                                                        
+                                                <td></td>                                                                                                                            
                                         </tr>  
-                                    </tbody>
-                                            
+                                    </tbody>                                     
                         </table>
                         <button type="button" onClick={ () => clearAllItems()} className="btn btn-primary btn-lg">
                             Vaciar Carrito

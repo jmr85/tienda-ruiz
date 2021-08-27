@@ -16,7 +16,7 @@ const ItemList = ({listProduct}) => {
                             id={item.id}
                             title={item.title} 
                             price={item.price} 
-                            pictureUrl={item.pictureUrl} 
+                            pictureUrl={item.imageId} 
                         />
                       
                     </Col>                   

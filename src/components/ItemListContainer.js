@@ -1,28 +1,55 @@
 import React, {useState, useEffect} from "react";
+import { getFirestore } from "../firebase/firebase-config";
 import { Spinner } from 'react-bootstrap';
 import ItemList from './ItemList';
-import fetchProductos from '../mock-api/promesa';
 import { useParams } from 'react-router-dom';
 
 
 const ItemListContainer = () => {
 
     const [prod, setProd] = useState([]);
-    const {id} = useParams();
-    
     const [load, setLoad] = useState(true);//para el <Spinner/>
 
+    const {id} = useParams();
+
+    console.log("items: ", prod);
+
     useEffect(() => {
-        fetchProductos().then( productos => {
-            let byIdOrAll = id ? productos.filter(element => element.category === id): productos;
-            setProd(byIdOrAll);   
-            setLoad(false);
-        });
-        console.log('useEffect ItemListContainer');
-        return () => {
-            console.log('useEffect unmount');
-            setLoad(true)
+
+        const db = getFirestore();
+        const itemCollection = db.collection("items");
+
+        if (id){
+            itemCollection.where("categoryName", "==", id)
+            .get()
+            .then(querySnapshot => {
+                if(querySnapshot.size === 0){
+                    console.log("No items");
+                }
+                setProd(querySnapshot.docs.map(document =>({
+                        id: document.id, ...document.data()
+                    }))
+                );
+            })
+            .catch(error => {console.log(error)})
+            .finally(() => setLoad(false)); 
+        }else{
+            itemCollection
+            .get()
+            .then(querySnapshot => {
+                if(querySnapshot.size === 0){
+                    console.log("No items");
+                }
+                setProd(querySnapshot.docs.map(document =>({
+                        id: document.id, ...document.data()
+                    }))
+                );
+            
+            })
+            .catch(error => {console.log(error)})
+            .finally(() => setLoad(false));
         }
+  
     }, [id])
 
     return (
