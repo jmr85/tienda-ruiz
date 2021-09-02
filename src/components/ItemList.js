@@ -1,29 +1,23 @@
-import React from 'react';
-import { Row, Col } from 'react-bootstrap';
-import Item from './Item';
+import React from 'react'
+import { CardGroup } from 'react-bootstrap'
+import Item from './Item'
 
-
-
-const ItemList = ({listProduct}) => {
-
-    return (
-        <div>
-            <Row xs={1} md={4} className="g-4">
-                {listProduct.map(item => (                                          
-                    <Col key={item.id}>
-                        <Item
-                            key={item.id} 
-                            id={item.id}
-                            title={item.title} 
-                            price={item.price} 
-                            pictureUrl={item.imageId} 
-                        />
-                      
-                    </Col>                   
-                ))}   
-            </Row>           
-        </div>
-    );
+const ItemList = ({ listProduct }) => {
+  return (
+    <div>
+      <CardGroup>
+        {listProduct.map(item => (
+          <Item
+            key={item.id}
+            id={item.id}
+            title={item.title}
+            price={item.price}
+            pictureUrl={item.imageId}
+          />
+        ))}
+      </CardGroup>
+    </div>
+  )
 }
 
-export default ItemList;
+export default ItemList
