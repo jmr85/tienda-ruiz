@@ -3,6 +3,10 @@
 
 This Ecommerce is specialized for sales of products for developers such as programming books and sale of laptops
 
+## Screenshots
+
+![App Screenshot](https://github.com/jmr85/tienda-ruiz/blob/master/doc/ecommerce.gif)
+
 
 ## Authors
 
