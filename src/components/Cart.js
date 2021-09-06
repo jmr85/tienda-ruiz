@@ -17,7 +17,7 @@ const Cart = () => {
       <div className="container-fluid animate__animated animate__fadeIn">
         <div className="row">
           <div className="col-md-12">
-            <h3 className="text-center">Cart</h3>
+            {/* <h3 className="text-center">Cart</h3> */}
 
             <table className="table">
               <thead>
@@ -40,8 +40,8 @@ const Cart = () => {
                           marginBottom: '10px',
                           marginTop: '10px'
                         }}
-                        width="120"
-                        height="130"
+                        width="70"
+                        height="80"
                         src={element.item.pictureUrl}
                         alt={element.item.title}
                       />

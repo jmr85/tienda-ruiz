@@ -25,12 +25,13 @@ const Checkout = () => {
       name: '',
       address: '',
       phone: '',
-      email: ''
+      email: '',
+      emailConfirmation: ''
     },
     validationSchema: yup.object({
       name: yup
         .string()
-        .min(3, 'Nombre debe tener al menos 3 caracteres')
+        .min(10, 'Nombre debe tener al menos 10 caracteres')
         .required('Debes ingresar un nombre'),
       address: yup
         .string()
@@ -46,9 +47,14 @@ const Checkout = () => {
       email: yup
         .string()
         .email('Formato Email invalido')
-        .required('Email es obligatorio')
+        .required('Email es obligatorio'),
+      emailConfirmation: yup
+        .string()
+        .email('Formato Email de confirmacion invalido')
+        .required('Email de confirmacion es obligatorio')
+        .oneOf([yup.ref('email'), null], 'Los emails deben coincidir')
     }),
-    onSubmit: values => {
+    onSubmit: ({ name, address, phone, email }) => {
       const newItems = items.map(({ item, quantity }) => ({
         item: {
           id: item.id,
@@ -65,7 +71,7 @@ const Checkout = () => {
       const batch = db.batch()
 
       const newOrder = {
-        buyer: values,
+        buyer: { name, address, phone, email },
         items: newItems,
         date: Timestamp.fromDate(new Date()),
         total: totalPriceCart()
@@ -174,6 +180,22 @@ const Checkout = () => {
             {formik.touched.email && formik.errors.email ? (
               <div className="alert alert-danger" role="alert">
                 {formik.errors.email}
+              </div>
+            ) : null}
+          </div>
+          <div className="form-group">
+            <label htmlFor="emailConfirmation">Repetir tu email</label>
+            <input
+              className="form-control"
+              id="emailConfirmation"
+              name="emailConfirmation"
+              type="emailConfirmation"
+              onChange={formik.handleChange}
+              value={formik.values.emailConfirmation}
+            />
+            {formik.touched.emailConfirmation && formik.errors.emailConfirmation ? (
+              <div className="alert alert-danger" role="alert">
+                {formik.errors.emailConfirmation}
               </div>
             ) : null}
           </div>
