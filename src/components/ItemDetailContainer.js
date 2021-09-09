@@ -1,36 +1,18 @@
 import React, { useState, useEffect } from 'react'
-import { getFirestore } from '../firebase/firebase-config'
+import { getDocById } from '../helpers/items'
 import { Container, Row, Col, Spinner } from 'react-bootstrap'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
-  const [product, setProduct] = useState(null)
+  const [product, setProduct] = useState({})
   const [load, setLoad] = useState(true) //para el <Spinner/>
 
   const { id } = useParams()
 
   useEffect(() => {
-    const db = getFirestore()
-    const itemCollection = db.collection('items')
-
-    const currentItem = itemCollection.doc(id)
-
-    currentItem
-      .get()
-      .then(document => {
-        if (!document.exists) {
-          console.log('No item')
-          return
-        }
-        setProduct({
-          id: document.id,
-          ...document.data()
-        })
-        setLoad(false)
-      })
-      .catch(err => console.log(err))
-
+    getDocById(id, setProduct);
+    setLoad(false);
     console.log('useEffect')
   }, [id])
 
