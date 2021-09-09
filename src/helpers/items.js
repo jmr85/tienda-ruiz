@@ -8,7 +8,7 @@ const itemCollection = db.collection("items");
 
 /*
     Trae todo el items collections, 
-    recibe por @param el useState de Product y useState de load
+    recibe por @param el useState de prod y useState de load
 */
 export const getItemsCollection = async (setProd, setLoad) => {
     try {
@@ -30,7 +30,7 @@ export const getItemsCollection = async (setProd, setLoad) => {
 }
 /*
     Trae items collection por id (categoryName), 
-    recibe por @param el id (categoryName) y el useState 
+    recibe por @param el id (categoryName), el useState de prod y useState de load 
 */
 export const getItemsCollectionById = async (id, setProd, setLoad) => {
     try {
@@ -52,7 +52,7 @@ export const getItemsCollectionById = async (id, setProd, setLoad) => {
 
 /*
     Trae Document Item por id, 
-    recibe por @param el id, el useState de Product y useState de load 
+    recibe por @param el id, el useState de product y useState de load 
 */
 export const getItemById = async (id, setProduct, setLoad) => {
     try {
