@@ -7,61 +7,68 @@ const itemCollection = db.collection("items");
 
 
 /*
-    Trae todo el items collections, recibe por @param el useState
+    Trae todo el items collections, 
+    recibe por @param el useState de Product y useState de load
 */
-export const getItemsCollection = (setProd) => {
-    itemCollection
-        .get()
-        .then(querySnapshot => {
-            if (querySnapshot.size === 0) {
-                console.log("No items");
-            }
-            setProd(
-                querySnapshot.docs.map(document => ({
-                    id: document.id, ...document.data()
-                }))
-            );
+export const getItemsCollection = async (setProd, setLoad) => {
+    try {
+        const querySnapshot = await itemCollection.get();
 
-        })
-        .catch(error => { console.log(error) })
+        if (querySnapshot.size === 0) {
+            console.log("No items");
+        }
+        setProd(
+            querySnapshot.docs.map(document => ({
+                id: document.id, ...document.data()
+            }))
+        );
+        setLoad(false);
+    } catch (error) {
+        console.log("Error getItemsCollection: ", error);
+    }
+
 }
 /*
     Trae items collection por id (categoryName), 
     recibe por @param el id (categoryName) y el useState 
 */
-export const getItemsCollectionById = (id, setProd) => {
-    itemCollection.where("categoryName", "==", id)
-        .get()
-        .then(querySnapshot => {
-            if (querySnapshot.size === 0) {
-                console.log("No items");
-            }
-            setProd(querySnapshot.docs.map(document => ({
-                id: document.id, ...document.data()
-            }))
-            );
-        })
-        .catch(error => { console.log(error) })
+export const getItemsCollectionById = async (id, setProd, setLoad) => {
+    try {
+        const querySnapshot = await itemCollection.where("categoryName", "==", id).get();
+
+        if (querySnapshot.size === 0) {
+            console.log("No items");
+        }
+        setProd(querySnapshot.docs.map(document => ({
+            id: document.id, ...document.data()
+        }))
+        );
+        setLoad(false);
+    } catch (error) {
+        console.log("Error getItemsCollectionById: ", error);
+    }
+
 }
 
 /*
-    Trae Document por id, 
-    recibe por @param el id y el useState 
+    Trae Document Item por id, 
+    recibe por @param el id, el useState de Product y useState de load 
 */
-export const getDocById = (id, setProduct) => {
+export const getItemById = async (id, setProduct, setLoad) => {
+    try {
+        const document = await itemCollection.doc(id).get();
 
-    const currentItem = itemCollection.doc(id)
-    currentItem
-        .get()
-        .then(document => {
-            if (!document.exists) {
-                console.log('No item')
-                return
-            }
-            setProduct({
-                id: document.id,
-                ...document.data()
-            })
+        if (!document.exists) {
+            console.log('No item')
+            return
+        }
+        setProduct({
+            id: document.id,
+            ...document.data()
         })
-        .catch(err => console.log(err))
+        setLoad(false);
+    } catch (error) {
+        console.log("Error getItemById: ", error);
+    }
+
 }

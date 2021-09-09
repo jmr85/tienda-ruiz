@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getDocById } from '../helpers/items'
+import { getItemById } from '../helpers/items'
 import { Container, Row, Col, Spinner } from 'react-bootstrap'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
@@ -11,8 +11,7 @@ const ItemDetailContainer = () => {
   const { id } = useParams()
 
   useEffect(() => {
-    getDocById(id, setProduct);
-    setLoad(false);
+    getItemById(id, setProduct, setLoad);
     console.log('useEffect')
   }, [id])
 

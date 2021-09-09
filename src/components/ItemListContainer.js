@@ -17,11 +17,9 @@ const ItemListContainer = () => {
     useEffect(() => {
 
         if (id) {
-            getItemsCollectionById(id, setProd);
-            setLoad(false);
+            getItemsCollectionById(id, setProd, setLoad);
         } else {
-            getItemsCollection(setProd);
-            setLoad(false);
+            getItemsCollection(setProd, setLoad);
         }
 
     }, [id])

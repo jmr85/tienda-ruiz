@@ -1,12 +1,11 @@
 import React, { useContext, useState } from 'react'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
-import { getFirestore } from '../firebase/firebase-config'
+import { addOrderCollection } from '../helpers/orders'
 import { Timestamp } from 'firebase/firestore'
 import { CartContext } from '../context/CartContext'
 import { Button } from 'react-bootstrap'
 import { NavLink, useHistory } from 'react-router-dom'
-import Swal from 'sweetalert2'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -66,10 +65,6 @@ const Checkout = () => {
 
       console.log('newItems', newItems)
 
-      const db = getFirestore()
-      const orders = db.collection('orders')
-      const batch = db.batch()
-
       const newOrder = {
         buyer: { name, address, phone, email },
         items: newItems,
@@ -77,34 +72,9 @@ const Checkout = () => {
         total: totalPriceCart()
       }
 
-      orders
-        .add(newOrder)
-        .then(response => {
-          console.log('response: ', response)
-
-          items.forEach(({ item, quantity }) => {
-            const docRef = db.collection('items').doc(item.id)
-            batch.update(docRef, { stock: item.stock - quantity })
-          })
-          batch.commit()
-
-          Swal.fire({
-            title: 'Orden creada',
-            text: 'El ID de su orden es: ' + response.id,
-            icon: 'success',
-            confirmButtonColor: 'green',
-            showClass: {
-              popup: 'animate__animated animate__fadeInDown'
-            },
-            hideClass: {
-              popup: 'animate__animated animate__fadeOutUp'
-            }
-          })
-
-          clearAllItems()
-          setIsSubmitting(true)
-        })
-        .catch(error => console.log(error))
+      addOrderCollection(newOrder, items);
+      clearAllItems()
+      setIsSubmitting(true)
     }
   })
   if (!isSubmitting) {
