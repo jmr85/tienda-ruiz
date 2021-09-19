@@ -33,13 +33,17 @@ export const CartProvider = ({ children }) => {
     }
     return count
   }
+  //formato moneda pesos argentinos
+  const currencyFormat = x => {
+    return new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(x);
+  }
 
   const totalPriceCart = () => {
     let total = 0
     for (const element of items) {
       total += element.item.price * element.quantity
     }
-    return total
+    return total;
   }
 
   return (
@@ -51,7 +55,8 @@ export const CartProvider = ({ children }) => {
         removeItem,
         clearAllItems,
         countItemQuantity,
-        totalPriceCart
+        totalPriceCart,
+        currencyFormat
       }}
     >
       {children}

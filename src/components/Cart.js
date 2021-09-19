@@ -4,7 +4,7 @@ import { Badge, Button } from 'react-bootstrap'
 import { NavLink, Link } from 'react-router-dom'
 
 const Cart = () => {
-  const { items, setItems, removeItem, clearAllItems, totalPriceCart } =
+  const { items, setItems, removeItem, clearAllItems, totalPriceCart, currencyFormat } =
     useContext(CartContext)
 
   useEffect(() => {
@@ -48,8 +48,8 @@ const Cart = () => {
                       {element.item.title}
                     </td>
                     <td>{element.quantity}</td>
-                    <td>${element.item.price}</td>
-                    <td>${element.item.price * element.quantity}</td>
+                    <td>{currencyFormat(element.item.price)}</td>
+                    <td>{currencyFormat(element.item.price * element.quantity)}</td>
                     <td>
                       <button
                         type="button"
@@ -65,7 +65,9 @@ const Cart = () => {
                 <tr className="table-active">
                   <td>
                     <h2>
-                      <Badge bg="success">Total: ${totalPriceCart()}</Badge>
+                      <Badge bg="success">
+                        Total: {currencyFormat(totalPriceCart())}
+                      </Badge>
                     </h2>
                   </td>
                   <td></td>

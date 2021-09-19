@@ -8,7 +8,7 @@ import Swal from 'sweetalert2'
 const ItemDetail = product => {
   const { title, price, pictureUrl, description, stock } = product
 
-  const { addItem } = useContext(CartContext)
+  const { addItem, currencyFormat } = useContext(CartContext)
 
   const [hideItemCount, setHideItemCount] = useState(false)
 
@@ -20,17 +20,17 @@ const ItemDetail = product => {
   const onAdd = stockValue => {
     stockValue === 1
       ? Swal.fire({
-          title: 'Bien!',
-          text: `Has agregado  ${stockValue} producto al carrito`,
-          icon: 'success',
-          confirmButtonColor: 'green'
-        })
+        title: 'Bien!',
+        text: `Has agregado  ${stockValue} producto al carrito`,
+        icon: 'success',
+        confirmButtonColor: 'green'
+      })
       : Swal.fire({
-          title: 'Bien!',
-          text: `Has agregado  ${stockValue} productos al carrito`,
-          icon: 'success',
-          confirmButtonColor: 'green'
-        })
+        title: 'Bien!',
+        text: `Has agregado  ${stockValue} productos al carrito`,
+        icon: 'success',
+        confirmButtonColor: 'green'
+      })
     setHideItemCount(true)
     addItem(product, stockValue)
   }
@@ -48,7 +48,7 @@ const ItemDetail = product => {
               <dl>
                 <dt>
                   <Badge pill bg="success">
-                    <h4>${price}</h4>
+                    <h4>{currencyFormat(price)}</h4>
                   </Badge>{' '}
                 </dt>
                 <br />
