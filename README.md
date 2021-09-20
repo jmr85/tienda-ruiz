@@ -1,19 +1,44 @@
 
 # Ecommerce Juan M Ruiz
 
-This Ecommerce is specialized for sales of products for developers such as programming books and sale of laptops
+Este ecommerce está especializado en la venta de productos para desarrolladores como libros de programación y venta de laptops.
 
 ## Screenshots
 
 ![App Screenshot](https://github.com/jmr85/tienda-ruiz/blob/master/doc/ecommerce.gif)
 
 
-## Authors
+## Autores ✒️
 
 - [@juanmruiz](https://www.github.com/jmr85)
 
-  
-## Run Locally
+## Construido con 🛠️
+
+* [ReactJS](https://en.reactjs.org/) - Libreria para el desarrollo de aplicaciones web completas del lado del cliente.
+* [React Router Web](https://reactrouter.com/web/guides/quick-start) - React Router es una colección de componentes de navegación que se componen de forma declarativa en la aplicación web.
+* [React Bootstrap](https://react-bootstrap.github.io/) - Framework front-end reconstruido para React.
+* [Animate css](https://animate.style/) - Es una libreria de animaciones css.
+* [Sweetalert](https://sweetalert2.github.io/) - Es una libreria que permite crear todo tipo de mensajes de alerta customizados.
+* [Formik](https://formik.org/) - Es una libreria de formularios para React. Se encarga de realizar un seguimiento de los valores, errores, que campos visitamos, validar y manejar el envio. Formik no utiliza bibliotecas de administración de estado externas como Redux o MobX. Esto hace que Formik sea fácil de adoptar gradualmente y mantiene el tamaño del paquete al mínimo.
+* [Yup](https://github.com/jquense/yup) - Es una libreria para validar los campos del formulario, utilizado para validar los campos del formulario [Formik](https://formik.org/).
+* [Firebase](https://firebase.google.com/) - Firebase es la plataforma de desarrollo de aplicaciones móviles de Google. En este proyecto se usa como backend.
+
+## Crear el esquema de la DB en [Firebase](https://firebase.google.com/) con Firestore
+
+Esquema items
+
+```
+categoryName: "sillas-oficina"
+description: "- Flia Hdc Group - Venta por mayor y menor!  Silla Oficina tela mesh  * Características *  • Material : Tela Mesh con eco cuero • Peso que soporta: 100kg • Altura regulable por sistema oleo-neumático: Si • Función giratoria 360° • Estrella metálica cromada reforzada • Costuras reforzadas • Ruedas de alta durabilidad • Basculante • Fácil de armar y limpiar"
+id: "2vHGYptHCqLrUEavle2L"
+imageId: "https://http2.mlstatic.com/D_NQ_NP_780243-MLA45630322465_042021-O.webp"
+price: 15999
+stock: 20
+title: "Sillon Silla Gamer Playstation Xbox Pc Oficina Hdc-group"
+
+```  
+
+## Run Locally 🚀
 
 Clone the project
 
@@ -39,4 +64,13 @@ React app Start
   npm start
 ```
 
-  
+
+## Expresiones de Gratitud 🎁
+
+* Comenta a otros sobre este proyecto 📢
+* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
+* Da las gracias públicamente 🤓.
+* etc.
+
+---
+⌨️ con ❤️ por [jmr85](https://github.com/jmr85) 😊
