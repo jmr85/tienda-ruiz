@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
-import { Card, Button } from 'react-bootstrap'
+import { Card, Button, Badge } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 
-const Item = ({ id, title, price, pictureUrl }) => {
+const Item = ({ id, title, price, pictureUrl, categoryName }) => {
   const { currencyFormat } = useContext(CartContext);
   return (
     <div>
@@ -14,6 +14,9 @@ const Item = ({ id, title, price, pictureUrl }) => {
         <Card.Img variant="top" src={pictureUrl} />
         <Card.Header>
           <Card.Title>{title}</Card.Title>
+          <Badge pill bg="secondary">
+            {categoryName}
+          </Badge>{' '}
         </Card.Header>
         <Card.Body>
           <Card.Text>{currencyFormat(price)}</Card.Text>

@@ -39,6 +39,20 @@ const NavBar = () => {
                 Sillas de oficina
               </Nav.Link>
               <Nav.Link
+                as={NavLink}
+                activeClassName="active"
+                to="/category/accesorios"
+              >
+                Accesorios
+              </Nav.Link>
+              <Nav.Link
+                as={NavLink}
+                activeClassName="active"
+                to="/category/bazar-nerd"
+              >
+                Bazar Nerd
+              </Nav.Link>
+              <Nav.Link
                 href="https://github.com/jmr85/tienda-ruiz"
                 target="_blank"
               >
