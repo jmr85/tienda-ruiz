@@ -66,7 +66,9 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                     </ButtonGroup>
                     <br />
                   </ButtonToolbar>
-                  <Card.Text>stock: {stockValue}</Card.Text>
+                  {
+                    stockValue !== 0 && <Card.Text>stock: {stock}</Card.Text>
+                  }
                   {stockValue <= 0 ? (
                     <Alert variant="danger">No hay stock</Alert>
                   ) : (
