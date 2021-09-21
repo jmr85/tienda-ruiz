@@ -1,9 +1,11 @@
-import { createContext, useState } from 'react'
+import { createContext } from 'react'
+import useLocalStorage from '../hooks/useLocalStorage';
 
 export const CartContext = createContext({})
 
 export const CartProvider = ({ children }) => {
-  const [items, setItems] = useState([])
+  // "items" del hook que se pasa como key es el setItem de localStorage
+  const [items, setItems] = useLocalStorage([], "items");
 
   const addItem = (item, quantity) => {
     if (!isInCart(item.id)) {
